@@ -34,12 +34,6 @@ public class CustomerEndpointTest {
     public static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:latest");
 
     @Autowired
-    CustomerService customerService;
-
-    @Autowired
-    CustomerMapper customerMapper;
-
-    @Autowired
     WebTestClient webTestClient;
 
     @Test
@@ -169,13 +163,6 @@ public class CustomerEndpointTest {
                 .expectBody().jsonPath("$.size()").value(greaterThan(0));
     }
 
-
-//
-//    public CustomerDTO getSavedCustomerDto() {
-//        return customerService.saveCustomer(
-//                Mono.just(customerMapper.customerToCustomerDto(getTestCustomer()))
-//        ).block();
-//    }
 
     public CustomerDTO getSavedTestCustomer() {
         FluxExchangeResult<CustomerDTO> customerDTOFluxExchangeResult = webTestClient.post()
