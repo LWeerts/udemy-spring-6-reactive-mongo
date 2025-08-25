@@ -1,9 +1,7 @@
 package guru.springframework.reactivemongo.web.fn;
 
 import guru.springframework.reactivemongo.domain.Customer;
-import guru.springframework.reactivemongo.mappers.CustomerMapper;
 import guru.springframework.reactivemongo.model.CustomerDTO;
-import guru.springframework.reactivemongo.services.CustomerService;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
